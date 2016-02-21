@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    title 文章列表
+    link(href="/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet")
+    link(href="/stylesheets/admin/admin.css" rel="stylesheet")
+    link(href="/stylesheets/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet")
+    script(src="/javascripts/jquery-1.11.3.min.js")
+    script(charset="utf-8" src="/javascripts/editor/kindeditor.js")
+    script(charset="utf-8" src="/javascripts/editor/lang/zh_CN.js")
+  body(style="margin:20px 200px 0 100px;")
+    .container
+      .row
+        .col-sm-12
+          form.form-horizontal(name="example" method="post" action="/admin/article/new")
+            div.form-group
+               
+              .col-sm-2
+                select.form-control(name="theme")
+                  option(value="weijie") 未解之谜
+                  option(value="lingyi") 灵异事件
+                  option(value="ufo") UFO探索
+                  option(value="yuzhou") 探索宇宙
+                  option(value="qiwen") 奇闻趣事
+              .col-sm-10 
+                input(type="text" class="form-control" name="title" rows="1")
+            hr
+            //-describe 描述文本
+
+            div.form-group
+              .col-sm-2
+                label 文章描述:
+              .col-sm-10   
+                input(type="text" class="form-control" name="txt" rows="1") 
+            div.form-group
+              .col-sm-2
+                label 来源站点:
+              .col-sm-4   
+                input(type="text" class="form-control" name="laiyuan" rows="1" value="未解之谜") 
+                  
+            div.form-group
+              .col-sm-2
+                label 来源url:
+              .col-sm-10   
+                input(class="form-control" name="laiyuanhtml" rows="1" value="/") 
+            hr
+            div.form-group
+              .col-sm-12  
+                textarea(id="editor_id" name="content") 
+            br
+            input(type="submit" name="button" value="提交内容" ) 
+      
+      
+      
+    script.
+     
+     var options = {
+       uploadJson: '/article/upload',
+       dialogwidth: '300px',
+       width : '100%',
+       height : '600px',
+       resizeType : 0,
+       items:['source','emoticons', 'image','multiimage',  'media', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript', 'superscript', 'formatblock', 'fontname', 'fontsize', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat' ,'|','pagebreak']
+       };
+      
+     
+     KindEditor.ready(function(K) {
+        
+        window.editor = K.create('#editor_id', options);
+        
+        //上传文件后执行的回调函数,获取上传图片的路径  
+        
+     });
+

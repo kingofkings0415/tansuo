@@ -1,0 +1,183 @@
+doctype html
+html
+  head
+    title 文章列表
+    link(href="/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet")
+    link(href="/stylesheets/admin/admin.css" rel="stylesheet")
+    link(href="/stylesheets/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet")
+    
+
+  body
+    div(style="margin:20px 200px 0 100px;")
+      
+
+      .form-grop
+        select(id="theme")
+          option(value="weijie") 未解之谜
+          option(value="lingyi") 灵异事件
+          option(value="ufo") UFO探索
+          option(value="yuzhou") 探索宇宙
+          option(value="qiwen") 奇闻趣事
+        label#articlecounts
+        input#articleNew.btn.btn-primary.pull-right(data-toggle="modal" data-target="#editModal" type="button" value="+新建文章") 
+      table.table.table-bordered
+        thead
+          tr
+            th
+              input(type="checkbox"  value="0" id="allsel")
+            th 标题
+            th 查看
+            th 时间
+            th 编辑
+        tbody
+         -for(var i =1;i<11;++i)
+            tr(id="item-"+i)
+              td
+                input(type="checkbox" name="checkbox"   id="checkbox-"+i num=+i)
+              td
+                h3(id="title-"+i)
+              td
+                h3(id="browse-"+i)    
+              td
+                h3(id="date-"+i)
+              td
+                a.ico.del(href="javascript:void(0);"   data-toggle="modal" data-target="#delModal" value= + i)
+                  li.fa.fa-trash-o 删除
+                a(href="javascript:;" class="ico edit articleEdit" data-toggle="modal" data-target="#editModal" value= + i) 
+                  li.fa.fa-pencil 编辑  
+                a(href="javascript:;" data-toggle="modal" data-target="#moveModal" class="ico edit" value= + i ) 
+                  li.fa.fa-pencil 移动
+                
+         
+           
+                  
+      .form-grop
+        input#DelSelData.btn.btn-primary(data-toggle="modal" data-target="#delModal" type="button" value="批量删除")
+
+        input#MoveSelData.btn.btn-primary(type="button" value="批量移动")                               
+      
+      div.pagination
+//-编辑对话框  
+div(class="modal fade" id="moveModal" aria-hidden="true")
+  div.modal-dialog
+    div(class="modal-content" )
+      div.modal-header
+
+        h4.modal-title 推荐文章
+               
+  
+        
+      div.modal-body
+        
+          .form-grop  
+            label.moveTitle
+          .form-grop
+            label 推荐文章to 
+            select(id="tuijian")
+              option(value="") NULL
+              option(value="guidong") 滚动
+              option(value="tupian") 图片
+              option(value="redian") 热点
+              option(value="tuijian") 推荐
+            
+      div.modal-footer
+        button(type="button" class="btn btn-default" 
+               data-dismiss="modal") 取消
+        button(type="button" class="moveArticle" class="btn btn-primary" data-dismiss="modal" ) 提交更改
+//-编辑对话框  
+div(class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelleaby="loginModalLabel" aria-hidden="true")
+  div.modal-dialog
+    div(class="modal-content" )
+      div.modal-header
+
+        h4.modal-title 删除文章
+      div.modal-body         
+        .form-grop  
+            label.moveTitle  
+      div.modal-footer
+        button(type="button" class="btn btn-default" 
+               data-dismiss="modal") 取消
+        button(class="delArticle" type="button" class="btn btn-primary" data-dismiss="modal") 确定  
+
+
+//-编辑对话框
+div(class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelleaby="loginModalLabel" aria-hidden="true" )
+  div.modal-dialog(style="margin-left: 0px;  width: 100%;")
+    div(class="modal-content" )
+      div.modal-header
+
+        h4.modal-title  编辑文章
+      div.modal-body     
+        .container
+          .row
+            .col-offset-sm-1.col-sm-11
+              form.form-horizontal(name="form")
+                div.form-group
+                   
+                  .col-sm-2
+                    select.form-control(name="theme")
+                      option(value="weijie") 未解之谜
+                      option(value="lingyi") 灵异事件
+                      option(value="ufo") UFO探索
+                      option(value="yuzhou") 探索宇宙
+                      option(value="qiwen") 奇闻趣事
+                  .col-sm-10 
+                    input(type="text" class="form-control" name="title" rows="1")
+
+                div.form-group
+                  .col-sm-2
+                    label 关键字:
+                  .col-sm-5  
+                    input(type="text" class="form-control" name="keywords" rows="1")
+                div.form-group
+                  .col-sm-2
+                    label 文章描述:
+                  .col-sm-10   
+                    input(type="text" class="form-control" name="txt" rows="1") 
+                div.form-group
+                  .col-sm-2
+                    label 来源站点:
+                  .col-sm-4   
+                    input(type="text" class="form-control" name="laiyuan" rows="1" value="未解之谜") 
+                      
+                div.form-group
+                  .col-sm-2
+                    label 来源url:
+                  .col-sm-10   
+                    input(class="form-control" name="laiyuanhtml" rows="1" value="/") 
+                div.form-group
+                  .col-sm-12  
+                    textarea(id="editor_id" name="content") 
+      div.modal-footer
+        button(type="button" class="btn btn-default" 
+               data-dismiss="modal") 取消
+        button(id="updateArtilce" class="btn btn-primary" data-dismiss="modal" type="button") 确定    
+
+       
+        script(charset="utf-8" src="/javascripts/editor/kindeditor.js")
+        script(charset="utf-8" src="/javascripts/editor/lang/zh_CN.js")
+          
+        script.
+         
+         var options = {
+           uploadJson: '/article/upload',
+           dialogwidth: '300px',
+           width : '100%',
+           height : '600px',
+           resizeType : 0,
+           items:['emoticons', 'image','multiimage',  'media', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript', 'superscript', 'formatblock', 'fontname', 'fontsize', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat' ]
+           };
+          
+         
+         KindEditor.ready(function(K) {
+            
+            window.editor = K.create('#editor_id', options);
+            
+            //上传文件后执行的回调函数,获取上传图片的路径  
+            
+         });
+       
+
+    script(src="/javascripts/jquery-1.11.3.min.js")
+    script(src="/javascripts/bootstrap.js")
+    script(src="/javascripts/admin/article.js")

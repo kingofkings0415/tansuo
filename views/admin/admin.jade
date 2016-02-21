@@ -1,0 +1,121 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link( href="stylesheets/admin/public.css" type="text/css" rel="stylesheet")
+    link( href="stylesheets/admin/houtai.css" type="text/css" rel="stylesheet")
+    link( href="stylesheets/admin/smartMenu.css" type="text/css" rel="stylesheet")
+    link(rel="stylesheet", href="/stylesheets/font-awesome-4.3.0/css/font-awesome.min.css")
+    title 网站后台管理 
+     
+  body
+    div(id="admin")
+      div(class="ad-menu" id="ad-menu")
+        div( class="ad-logo")
+          img(src="images/admin/m-logo.png" height="103" width="130") 
+        div( class="ad-list")
+          ul
+            li.over
+              div( class="li-item") 
+                em(class="scm li-ico ic1") 
+                网站管理
+                span(class="scm arrow")  
+              dl
+                dd
+                  a(href="/admin/depot/seo" class="dd-item" target="show" ) seo优化
+                    span(class="scm dd-ar")
+                                                                 
+                                   
+            li
+              div( class="li-item") 
+                em(class="scm li-ico ic1") 
+                文章管理
+                span(class="scm arrow")
+              dl
+                dd
+                  a(href="/admin/article/manager" class="dd-item" target="show" ) 文章管理
+                    span(class="scm dd-ar")
+                 
+                  
+                                        
+            li                         
+              div(class="li-item")
+                em(class="scm li-ico ic2") 
+                广告管理
+                span(class="scm arrow") 
+              dl
+                dd
+                  a( href="#" class="dd-item") 新广告
+                    span(class="scm dd-ar") 
+                                 
+                dd
+                  a( href="#" class="dd-item") 广告位调整
+                    span(class="scm dd-ar") 
+                                
+                             
+                                             
+            li
+              div(class="li-item")
+                em(class="scm li-ico ic6") 
+                统计管理
+                span(class="scm arrow") 
+              dl
+                dd 
+                  a( href="#" class="dd-item") 访问量
+                    span(class="scm dd-ar")  
+                               
+                dd
+                  a( href="#" class="dd-item") 转载量
+                    span(class="scm dd-ar")     
+                                 
+            li
+              div(class="li-item")
+                em(class="scm li-ico ic7")  
+                系统管理
+                span(class="scm arrow") 
+              dl
+                dd
+                  a( href="#" class="dd-item") 数据库信息
+                    span(class="scm dd-ar") 
+                                 
+                dd
+                  a( href="#" class="dd-item") 待定
+                    span(class="scm dd-ar") 
+                                 
+      div(class="ad-comment-box" id="ad-comment")
+        div( class="ad-top-comment")
+          div( class="ad-message")
+            
+            div( class="ad-top-right")
+              div( class="ad-notice")
+                ul
+                  li
+                    a( href="javascript:;" class="scm nt1")
+                      span(class="scm nt-count dot") 12
+                  li                   
+                    a(href="javascript:;" class="scm nt2")
+                      span(class="scm nt-count dot") 12 
+                  li
+                    a( href="javascript:;" class="scm nt3")
+                      span(class="scm nt-count dot") 12 
+                                     
+              div( class="ad-welcom")
+                div(class="ad-wel-img")
+                  img(src="images/admin/min_logo.png" height="36" width="36") 
+                div( class="ad-wel-text")
+                  div( class="font-wel") 欢迎您！
+                    strong 管理员 
+                  div(class="font-wel")
+                    a( href="javascript:;")
+                      strong 【退出】 
+                                
+          div(class="ad-main-comment J_mainContent" id="ad-iframe")
+            iframe(class="J_iframe" name="show" width="100%"  height="100%" src="/admin/article/manager" frameborder="0" data-id="/admin/article/manager" seamless) 
+            
+    script(type="text/javascript" src="/javascripts/admin/jquery.min.js") 
+    script(type="text/javascript" src="/javascripts/admin/contabs.js") 
+    script(type="text/javascript" src="/javascripts/admin/maintabs.js") 
+    script(type="text/javascript" src="/javascripts/admin/jquery-smartMenu-min.js") 
+    script(type="text/javascript" src="/javascripts/admin/jquery.nicescroll.min.js") 
+    
+        

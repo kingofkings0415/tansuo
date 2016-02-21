@@ -1,0 +1,1 @@
+mongod -dbpath D:/mongodb/app-1

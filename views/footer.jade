@@ -1,0 +1,105 @@
+div.container.pull-bottom
+  div.row
+    div.col-xs-12.col-md-offset-2.col-md-8
+      hr
+      footer 
+        p 
+          a(href="#") BY 爱宝宝
+   
+  //-登录对话框  
+div(class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelleaby="loginModalLabel" aria-hidden="true")
+  div.modal-dialog
+    div(class="modal-content" )
+      div.header
+        div(class="switch" id="switch")
+          a(class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7" ) 快速登录
+          a(class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8" ) 快速注册
+          div(class="switch_bottom" id="switch_bottom" style="position: absolute; width: 70px; left: 0px;")
+        
+      div.web_qr_login#web_qr_login(style="display: block; height: 275px;")
+        div.web_login#web_login
+          .login-box
+            .login_form
+              div
+                input(type="hidden" name="did" value="0")
+                input(type="hidden" name="to" value="log")
+                div( id="userLogin" class="cue") 
+                div(class="uinArea" id="uinArea")
+                  label(class="input-tips" for="u") 帐号：
+                  div(class="inputOuter" id="uArea")
+                      
+                    input(type="text" id="username" name="username" class="inputstyle")
+                div(class="pwdArea" id="pwdArea")
+                  label(class="input-tips" for="p") 密码:
+                  div(class="inputOuter" id="pArea")
+                      
+                    input(type="password" id="password" name="password" class="inputstyle")  
+                div(style="padding-left:50px;margin-top:20px;") 
+                  input(type="button" id="userlogin" style="width:150px;" class="button_blue" value="登 录") 
+
+      .qlogin#qlogin(style="display: none;") 
+        .web_login
+          form(name="form2" id="regUser" accept-charset="utf-8" action="" method="post")
+            input(type="hidden" name="to" value="reg")
+            input(type="hidden" name="did" value="0")
+            ul(class="reg_form" id="reg-ul")
+              div( id="userCue" class="cue") 快速注册请注意格式 
+              li
+                  
+                label(for="user" class="input-tips2") 用户名：
+                div(class="inputOuter2")
+                  input(type="text" id="user" name="user" maxlength="16" class="inputstyle2")
+                    
+                
+              li
+                label(for="passwd" class="input-tips2") 密码：
+                div(class="inputOuter2")
+                  input(type="password" id="passwd" name="passwd" maxlength="16" class="inputstyle2")
+                   
+                
+              li
+                label(for="passwd2" class="input-tips2") 确认密码：
+                div(class="inputOuter2")
+                  input(type="password" id="passwd2" name="" maxlength="16" class="inputstyle2")
+                    
+              
+                
+              li
+                label(for="qq" class="input-tips2") QQ:
+                div(class="inputOuter2")                     
+                  input(type="text" id="qq" name="qq" maxlength="10" class="inputstyle2")
+                    
+              li
+                label#regcaptcha(for="regcaptcha" class="input-tips2") 
+                div(class="inputOuter2")
+                  input(type="text" id="captcha" class="inputstyle2" name="captcha")
+              li
+                div(class="inputArea")
+                  input(type="button" id="reg" style="margin-top:10px;margin-left:85px;" class="button_blue" value="同意协议并注册")
+                  a(href="#" class="zcxy" target="_blank"  data-toggle="modal" data-target="#xieyiModal") 注册协议 
+                   
+                    
+              div(class="cl")
+div(class="modal fade" id="xieyiModal" tabindex="-1" role="dialog" aria-labelleaby="xieyiModalLabel" aria-hidden="true")
+  div.modal-dialog
+    div(class="modal-content" )
+      div
+        div(class="reg_form" id="reg-ul")
+          div( id="userCue" class="cue")  网站协议
+        lable(style="padding-right: 5px;width:300px;") 网站提醒您：本协议是加入本站的标准协议，您只有完全同意本协议条款，才能注册为本站的注册用户。您必须遵守中华人民共和国的互联网相关管理条例，其中包括不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益，不得利用本站制作、复制和传播下列信息：1，煽动抗拒、破坏宪法和法律、行政法规实施的；2，煽动颠覆国家政权，推翻社会主义制度的；3，煽动分裂国家、破坏国家统一的； 4，煽动民族仇恨、民族歧视，破坏民族团结的；5，捏造或者歪曲事实，散布谣言，扰乱社会秩序的； 6，宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；7，公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；8，损害国家机关信誉的； 9，其他违反宪法和法律行政法规的。特别提醒：您必须尊重他人的权利，严格遵守我国相关知识产权法律法规，不得在XXXXXXXXXXX网站上发布侵权违法链接。 XXXXXXXXXXX高度重视知识产权保护并遵守中国各项知识产权法律、法规和具有约束力的规范性文件。根据法律、法规和规范性文件要求，XXXXXXXXXXX制定了旨在保护知识产权权利人合法权益的措施和步骤，当著作权人和/或依法可以行使著作权的权利人（以下简称“权利人”）发现在XXXXXXXXXXX网页的内容侵犯其著作权时，权利人应事先向XXXXXXXXXXX发出书面的“权利通知”，XXXXXXXXXXX将根据中国法律法规和政府规范性文件采取措施移除相关内容或断开相关链接。具体措施和步骤如下：任何个人或单位如果符合以下两个条件： 1、是某一作品的著作权人和/或依法可以行使著作权的权利人； 2、通过用户上传信息指令以非人工方式自动生成的XXXXXXXXXXX网页侵犯了上述作品的著作权。 请上述个人或单位务必以书面的通讯方式向XXXXXXXXXXX提交权利通知。为有效处理上述个人或单位的权利通知，通知书应当包含下列内容：1、权利人的姓名(名称)、联系方式和地址;2、要求删除或者断开链接的侵权作品、表演、录音录像制品的名称和网络地址；           3、构成侵权的初步证明材料（包括且不限于权利人对涉嫌侵权内容拥有著作权和/或依法可以行使著作权的权属证明）。4、权利人对通知书的真实性声明。 5、请您签署该文件，如果您是依法成立的机构或组织，请您加盖公章。作为注册用户，请您同时遵守下列规定：本着客观和公正的态度来参与本论坛中的讨论； 对危害本坛、危害他人的信息，应给予否定并举报给管理员； 对于提供给大众的信息，请保持信息的健康和可看性，并注意不要侵害他人的各项权利；对自己的个人观点、以及自己的发布资源持认真和负责态度； 对于转载的信息，请写明转载和出处，尊重原作者的版权。对于转载XXXXXXXXXXX信息去他处，请同样对待。 XXXXXXXXXXX注册用户的禁忌和处罚规则： 1，严禁注册不雅的帐号名，也禁止一人注册多个帐号，使用"马甲"自我吹捧或攻击他人。违者删除帐号。 2，论坛里严禁使用不雅文字、恶意方言、谩骂、做人身攻击等字眼，严重违规者不经警告取消会员资格。 3，论坛严禁发布商业、传销、低俗的广告，有意违反此规定者，不经警告取消会员资格。4，禁止无意义的灌水，如回文中只有"顶"、"支持"、"感谢"、"同意"……等字眼，无其它文字，就算要感谢也请由内心写出对原发文者一些感受。违者，删除帖子并警告，明显为骗发帖数而连续灌水的停止帐号权限一周。 5，严禁重覆开设主题，或一文多发，违者删帖并警告，累犯者停止其发言权利一个月。6，发起主题请明确标示主题类形，如：[讨论]、[转贴]……等。不允许在主题中添加大量无意义符号。请依各版所定之主题格式发起主题，违者经劝告不听者直接删文。 7，如需引用非原创文章请尽量于主题或内文中标明原始出处及原作者，请尊重原作者的劳动。8，尽量避免在短时间内重复开辟相同或是类似主题； 9，标题请不要使用[请进]、[救命阿]、[某某大大请进]这类无法判别内容性质的文章，并请内文与主题名称相关，以避免其他网友浏览上的时间浪费。 10，请不要在文章内留下您的信箱及相关资料，来要求别人直接为您服务，或者直接向他人发布短信或邮件要求服务。这是一种不礼貌的习惯，没有人有责任为您提供这种免费的上门服务！ 11，严禁发布任何与中国法律与社会体制相违背的政治、色情、敏感、有害等内容。违者直接取消会员资格。 12，严禁使用色情、低级、猥琐图片作为头像或签名。对签名中文字的要求等同于帖子。图片宽度不能超过屏幕宽度。一般情况下，高度不能超过300点(图片+文字)。如果在签名里放入自己在VC发布的资源的链接，高度可以略高，但不能超过350(图片+文字)。不能使用音乐，如果要加Flash，需要把音乐去掉。签名的体积(包括图片+文字+flash等等)必须不大于512K。 13，严禁使用和别的用户相同或相近的ID、头像或签名，并以此刻意造成歧义。违者将被取消发帖权。 14，严禁使用论坛的短讯、邮件系统对其他网友进行骚扰或发送广告，违者取消会员资格。15，严禁张贴破坏p2p规则的程序连接，及被官方禁止的mod程序连接，违者取消会员资格。禁止张贴该程序连接、但不禁止讨论这些程序。 16，除此会员公约外，各会员仍需遵守各版版规，以维护各版环境。 17，论坛的好坏、乃取决于会员本身的水平，大家若是希望能够拥有更优质更具互动性的讨论风气，请大家由自己本身做起，并请互相规劝，让大家都能获得应有的尊重与互动品质。
+
+          
+       
+script(src="/javascripts/jquery-1.11.3.min.js")
+script(src="/javascripts/bootstrap.js")
+
+script(src="/javascripts/forum.js")  
+script(src="/javascripts/jquery.cookie.js")  
+      
+            
+script(src="/javascripts/login.js")  
+//-图片处理
+script(src="/javascripts/FancyZoom/js-global/FancyZoom.js")
+script(src="/javascripts/FancyZoom/js-global/FancyZoomHTML.js")
+
+block scrjs

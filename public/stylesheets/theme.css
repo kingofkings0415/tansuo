@@ -1,0 +1,91 @@
+.mod-theme .title {
+  
+  border-bottom: 1px solid #CCCCCC;
+  font-size: 16px;
+  font-weight: bold;
+  width:auto;
+  
+}
+
+.hr {
+  border-bottom: 3px solid #e5e5e5;
+  overflow: hidden;
+  margin-top:20px;
+  margin-bottom:5px;
+}
+
+.block {
+  
+  margin-bottom:20px;
+  margin-top:20px;
+}
+/*块风格*/
+.left{
+  float:left;
+  
+}
+
+.block div a{
+ word-wrap: break-word; 
+ word-break: normal;
+}
+
+
+ 
+.background-theme {
+  color: white;
+  text-shadow: none;
+}
+.btn.blue {
+  background-color: #4d90fe;
+}
+/* 表格盒子 */
+
+.theme-box{ 
+  clear: both;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+.theme-box .theme-body {
+    padding: 0px;
+    background-color: #fff;
+}
+.clearPadding{
+  padding:0  !important;;
+}
+.theme-box .theme-title{
+  background-color: #4b8df8;
+  margin-bottom: 0px;
+  padding: 10px 20px 30px 20px;
+  border-bottom: 1px solid #eee;
+  color: #fff !important;
+
+}
+.theme-title h3 {
+  float: left;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
+  
+}
+/*主题标题  */
+.theme-title a{
+  float:right;
+  position: relative;
+}
+.theme-body img{
+  height:100%;
+  width:100%;
+}
+.theme-body a{
+  margin-top:300px;
+}
+.theme-blocks {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #faf6ea;
+  border-top: solid 2px #faf6ea;
+}

@@ -1,0 +1,78 @@
+body {
+      background: #f5f5f5;
+    font-size: 12px;
+    color: #000;
+}
+/*article c*/
+.article-box {
+  border-bottom: 3px solid #CCCCCC;
+  height: 25px;
+ 
+}
+em {
+  font: 20px/35px "微软雅黑","simhei";
+  margin: 8px 0 0;
+  display: inline-block;
+}
+a:hover ,.article-box a:hover{
+  color: #f00;
+  text-decoration: none;
+}
+
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+.article-box a{
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 3px solid #083E6D;
+  display: block;
+  float: left;
+  margin-top: -3px;
+}
+.article-img{
+  margin-top: 10px; 
+}
+
+.MarginRow{
+
+  margin-top:15px;
+  margin-bottom: 15px;
+
+}
+.cont {
+  /* margin-left: 10px; */
+  line-height: 21px;
+}
+@media (max-width: 768px) {
+   /*适应手机屏幕*/
+  .cont{
+    display: none;
+  }
+  .article-img{
+    height:78px !important;
+  }
+  .clearPadding{
+     padding-left:0  !important;
+     padding-right:0  !important;
+  }
+}
+.nav-bar li a:hover {
+    background: #000 !important;    
+    text-decoration: none;
+}
+
+.nav-bar a{
+    color: #E1E1E1;
+    display: inline;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+     
+    overflow: hidden;
+    padding: 0 15px;
+}

@@ -1,0 +1,13 @@
+textarea.m-wrap {
+  height: auto;
+}
+
+.btn.blue {
+  color: white;
+  text-shadow: none;
+  background-color: #4d90fe;
+}
+.box .black{
+  color:white;
+  background-color:black;
+}

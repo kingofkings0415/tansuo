@@ -1,0 +1,21 @@
+
+.art{
+    /* padding-bottom: 8px; */
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #CCC;
+}
+
+img{
+
+   width: 100% !important;
+}
+.browse{
+    margin-right: 40px;
+    float: right;
+}
+
+
+.title h2{
+  margin-left:20%;
+}

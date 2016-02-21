@@ -1,0 +1,481 @@
+
+/* 表格盒子 */
+.portlet.box.grey {
+  
+  border-top: 0;
+}
+.portlet.box.grey .portlet-title {
+  background-color: #555555;
+}
+
+.portlet.box .portlet-body {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #9d9c9c;
+}
+.portlet.box .portlet-title {
+  padding: 8px 10px 10px 10px;
+  border-bottom: 1px solid #eee;
+  color: #fff !important;
+}
+
+
+.portlet-title .actions > .btn {
+  padding: 4px 10px;
+  margin-top: -13px;
+}
+
+.portlet-title .actions > .btn-group > .btn {
+  padding: 4px 10px;
+  margin-top: -1px;
+}
+
+.portlet-title .actions > .btn.mini {
+  margin-top: -12px;
+  padding: 4px 10px;
+}
+
+/* Table Headers */
+
+table td , table thead , table thead th
+{
+  /*border: 1px solid #d4d4d4;*/
+}
+table tr input , table td  {
+  cursor: pointer;
+}
+
+
+ tbody tr:hover {
+    background-color: #eee;
+   
+}
+
+.bk-white{
+  background-color: #080808;
+  background:#fff;
+} 
+
+
+.cover.navbar.navbar-inverse .navbar-nav > .active > a,
+.cover.navbar.navbar-inverse .navbar-nav > .active > a:hover,
+.cover.navbar.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #000;
+  background-color: #080808;
+}
+.cover.navbar-inverse .navbar-nav > .disabled > a,
+.cover.navbar-inverse .navbar-nav > .disabled > a:hover,
+.cover.navbar-inverse .navbar-nav > .disabled > a:focus {
+  color: #444444;
+  background-color: transparent;
+}
+
+
+
+.form-signin{
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  border: 1px solid #a0b1c4;   
+  z-index: 12;
+  border-radius: 3px;
+  overflow: hidden;
+ 
+}
+input{
+  margin-bottom: 3px;
+}
+
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: " >> ";
+    padding: 0 5px;
+}
+
+span.badge {
+  margin-left: 30px;
+}
+
+ul.inline>li, ol.inline>li {
+  display: inline-block;
+
+}
+ul, ol {
+  margin-left: 0;
+  list-style-type: none;
+}
+li i {
+  color: #78cff8;
+}
+li [class^="icon-"], li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+
+/* 
+Author: Start Bootstrap - http://startbootstrap.com
+'SB Admin' HTML Template by Start Bootstrap
+
+All Start Bootstrap themes are licensed under Apache 2.0. 
+For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
+*/
+
+/* ATTN: This is mobile first CSS - to update 786px and up screen width use the media query near the bottom of the document! */
+
+/* Global Styles */
+
+body {
+  margin-top: 50px;
+}
+
+#wrapper {
+  padding-left: 0;
+}
+
+#page-wrapper {
+  width: 100%;
+  padding: 5px 15px;
+}
+
+/* Nav Messages */
+
+.messages-dropdown .dropdown-menu .message-preview .avatar,
+.messages-dropdown .dropdown-menu .message-preview .name,
+.messages-dropdown .dropdown-menu .message-preview .message,
+.messages-dropdown .dropdown-menu .message-preview .time {
+  display: block;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .avatar {
+  float: left;
+  margin-right: 15px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .name {
+  font-weight: bold;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .message {
+  font-size: 12px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .time {
+  font-size: 12px;
+}
+
+
+/* Nav Announcements */
+
+.announcement-heading {
+  font-size: 50px;
+  margin: 0;
+}
+
+.announcement-text {
+  margin: 0;
+}
+
+
+/* Flot Chart Containers */
+
+.flot-chart {
+  display: block;
+  height: 400px;
+}
+
+.flot-chart-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* Edit Below to Customize Widths > 768px */
+@media (min-width:768px) {
+
+  /* Wrappers */
+
+  #wrapper {
+  padding-left: 225px;
+  }
+
+  #page-wrapper {
+  padding: 15px 25px;
+  }
+
+  /* Side Nav */
+
+  .side-nav {
+  margin-left: -225px;
+  left: 225px;
+  width: 225px;
+  position: fixed;
+  top: 50px;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  background-color: #222222;
+  overflow-y: auto;
+  }
+
+  /* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+
+  .side-nav>li.dropdown>ul.dropdown-menu {
+  position: relative;
+  min-width: 225px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  }
+
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a {
+  color: #999999;
+  padding: 15px 15px 15px 25px;
+  }
+
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
+  color: #fff;
+  background-color: #080808;
+  }
+
+  .side-nav>li>a {
+  width: 225px;
+  }
+
+ 
+
+  /* Nav Messages */
+
+  .messages-dropdown .dropdown-menu {
+  min-width: 300px;
+  }
+
+  .messages-dropdown .dropdown-menu li a {
+  white-space: normal;
+  }
+
+}
+
+
+
+.section {
+  position: relative;
+  
+}
+.section .background-image {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.section .background-image.background-image-fixed {
+  background-attachment: fixed;
+}
+.section-primary {
+  background-color: #337cbb !important;
+  color: #ffffff;
+}
+.section-info {
+  background-color: #5bc0de !important;
+  color: #ffffff;
+}
+.section-success {
+  background-color: #5cb85c !important;
+  color: #ffffff;
+}
+.section-warning {
+  background-color: #f0ad4e !important;
+  color: #ffffff;
+}
+.section-danger {
+  background-color: #d9534f !important;
+  color: #ffffff;
+}
+.cover {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+  margin-bottom: 0px !important;
+  padding: 0px 0px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+}
+.cover h1,
+.cover .h1 {
+  color: inherit;
+}
+.cover p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.cover > hr {
+  border-top-color: #d5d5d5;
+}
+.container .cover,
+.container-fluid .cover {
+  border-radius: 5px;
+}
+.cover .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .cover {
+    padding: 48px 0;
+  }
+  .container .cover,
+  .container-fluid .cover {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .cover h1,
+  .cover .h1 {
+    font-size: 63px;
+  }
+}
+.cover h1.text-primary {
+  color: #337cbb !important;
+}
+.cover h1.text-inverse {
+  color: #000 !important;
+}
+.cover h1.text-info {
+  color: #5bc0de !important;
+}
+.cover h1.text-success {
+  color: #5cb85c !important;
+}
+.cover h1.text-warning {
+  color: #f0ad4e !important;
+}
+.cover h1.text-danger {
+  color: #d9534f !important;
+}
+@media screen and (min-width: 768px) {
+  .cover {
+    padding: 0px;
+  }
+  .container .cover,
+  .container-fluid .cover {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.cover .navbar {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  border: none;
+  background-color: transparent !important;
+}
+.cover .navbar .navbar-nav li.active a {
+  background-color: transparent !important;
+}
+.cover .navbar .navbar-toggle {
+  border-color: transparent;
+}
+.cover .navbar .navbar-toggle:hover,
+.cover .navbar .navbar-toggle:focus {
+  background-color: transparent;
+}
+.cover .navbar .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+.cover .navbar.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+.cover .navbar.navbar-inverse .navbar-toggle:hover,
+.cover .navbar.navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+.cover .navbar.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+.cover .cover-image {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.cover .cover-image.background-image-fixed,
+.cover .cover-image.cover-image-fixed {
+  background-attachment: fixed;
+}
+/* PINGENDO COMMENT DO NOT REMOVE */
+
+ .nav-bar {
+    font-size: 16px;
+    color: #727272;
+    line-height: inherit;
+}
+ .nav-bar .dropdown-menu dl dd a {
+    margin: 0px 10px 0px 0;
+    padding: 0;
+    height: auto;
+    line-height: 22px;
+    font-size: 12px;
+}
+.nav-bar .dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 52px;
+    width: 540px;
+    background: #fff;
+    border: 2px solid #ccc;
+    padding: 8px 30px 25px 0;
+    z-index: 9999;
+    border-top: 0;
+    border-radius: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.nav-bar.dropdown-menu dl {
+    width: 140px;
+    margin: 15px 0 0 30px;
+    min-height: 100px;
+    float: left;
+    padding: 0;
+}
+.nav-bar .dropdown-menu dl {
+    width: 140px;
+    margin: 15px 0 0 30px;
+    min-height: 100px;
+    float: left;
+    padding: 0;
+}
+
+
+.nav-bar .dropdown:hover>a {
+    margin-bottom: -2px;
+    border-bottom: 2px solid #dc3c00;
+}
+
+.control-label .required {
+  color: #e02222;
+  font-size: 12px;
+  padding-left: 4px;
+}
+
+
+

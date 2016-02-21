@@ -1,0 +1,45 @@
+.sp3 {
+    font-size: 1px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 3px;
+}
+#posion {
+    color: #616264;
+}
+.fl {
+    text-align: left;
+}
+.f12 {
+    font-size: 12px;
+}
+.fl {
+    text-align: left;
+}
+div, form, img, ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#laiy a:link, a:visited {
+    color: #616161;
+}
+#posion a:link, a:visited {
+    color: #616264;
+}
+
+
+a:visited {
+    color: #000;
+    text-decoration:  none;
+}
+
+a {
+    text-decoration: none;
+    color: #1F376D;
+}
+
+.cGray4, a.cGray4:link, a.cGray4:visited {
+    color: #616161;
+}

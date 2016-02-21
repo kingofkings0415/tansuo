@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title 网站状态
+    link(href="/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet")
+    script(src="/javascripts/jquery-1.11.3.min.js")
+    script(src="/javascripts/bootstrap.js")
+    script(src="/javascripts/admin/admin.js")
+    
+  body
+    div.container
+      div.row
+        div.col-offset-md-2.col-md-2
+          form
+            div.form-group 
+              input(type="button" class="form-control" id="updateindex" value="更新主页" )
+            div.form-group 
+              input(type="button" class="form-control" id="updateforum" value="更新版块" ) 
+    .table-responsive(style="margin:20px 200px 0 100px;")
+      table.table.table-bordered
+        caption 信息状态
+        thead
+          tr
+            th #
+            th 类别
+            th 数量
+            th 阅读
+            th 转载
+            th 作者
+            
+        tbody
+          tr
+            td 1
+            td 用户数量
+            td 3
+            td 4
+            td 4
