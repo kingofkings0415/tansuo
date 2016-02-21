@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var sql = require('./database/SqlUserManager');
 var nodemailer  = require("nodemailer");
 var fs = require('fs');
 

@@ -2,8 +2,6 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
-var session = require('express-session');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
@@ -24,12 +22,11 @@ app.set('view engine', 'jade');
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 
-app.use(session({ secret: 'lgnode', key: "lgnode", resave: true, saveUninitialized: true,cookie: { maxAge: 20000}}));  
-//session 时长为20秒,这个是以毫秒为单位,这样我们就建立一个session的会话，这是一个全局的设置
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+
   
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'static')));
@@ -38,7 +35,7 @@ app.use(express.static(__dirname, 'index.html'));
 app.use('/a', express.static(path.join(__dirname,  'a')));
 //添加处理模块
 app.use('/', routes);
-app.use('/user', user);
+//app.use('/user', user);
 //app.use('/article',article);
 app.use('/admin',admin);
 
